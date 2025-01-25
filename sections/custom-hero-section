@@ -1,0 +1,17 @@
+<section class="custom-hero-section">
+    <div class="custom-header">
+        <h1>logo</h1>
+        <p>heading</p>
+        <a href="custon-btn nav-btn">choose gift</a>
+    </div>
+    <div class="hero-section-main">
+        <img src="{{  }}" alt="">
+        <div class="hero-section-main-content">
+            <h2>The Gift Guide</h2>
+            <p>Discover Joy: Your Ultimate Holiday Gift Destination. Explore our curated selection and find the perfect
+                gifts to delight your loved ones this holiday season.</p>
+            <a href="custon-btn">Shop Now</a>
+        </div>
+    </div>
+
+</section>
