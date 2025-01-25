@@ -1,17 +1,79 @@
 <section class="custom-hero-section">
-    <div class="custom-header">
-        <h1>logo</h1>
-        <p>heading</p>
-        <a href="custon-btn nav-btn">choose gift</a>
+  <div class="custom-header">
+    <img src="{{ section.settings.logo |  image_url : "master"}}" alt="Logo" width="100%" height="100%">
+    <p>{{ section.settings.headerheading }}</p>
+    <a class="custon-btn nav-btn" href="{{ section.settings.btnlink }}">{{ section.settings['btn-text'] }}</a>
+  </div>
+  <div class="hero-section-main">
+    <img src="{{ section.settings.heroimg |   image_url : "master"}}" alt="Hero image" width="100%" height="100%">
+    <div class="hero-section-main-content">
+      <h2>{{ section.settings.heroheading }}</h2>
+      <p>{{ section.settings.herocontent }}</p>
+      <a class="custon-btn" href="{{ section.settings.herobtnlink }}">{{ section.settings['hero-btn-text'] }}</a>
     </div>
-    <div class="hero-section-main">
-        <img src="{{  }}" alt="">
-        <div class="hero-section-main-content">
-            <h2>The Gift Guide</h2>
-            <p>Discover Joy: Your Ultimate Holiday Gift Destination. Explore our curated selection and find the perfect
-                gifts to delight your loved ones this holiday season.</p>
-            <a href="custon-btn">Shop Now</a>
-        </div>
-    </div>
-
+  </div>
 </section>
+
+{% schema %}
+{
+  "name": "Custom Hero Sectio",
+  "settings": [
+    {
+      "type": "image_picker",
+      "label": "Logo",
+      "id": "logo"
+    },
+    {
+      "type": "text",
+      "label": "heading",
+      "id": "headerheading",
+      "default": "Heading Line"
+    },
+    {
+      "type": "text",
+      "label": "Button text",
+      "id": "btn-text",
+      "default": "Button text"
+    },
+    {
+      "type": "url",
+      "label": "Button Link",
+      "id": "btnlink"
+    },
+    {
+      "type": "image_picker",
+      "label": "Hero Section image",
+      "id": "heroimg"
+    },
+    {
+      "type": "text",
+      "label": "Hero Section Heading",
+      "id": "heroheading",
+      "default": "Hero Section Heading"
+    },
+    {
+      "type": "text",
+      "label": "Hero Section Content",
+      "id": "herocontent",
+      "default": "Hero Section Content"
+    },
+    {
+      "type": "text",
+      "label": "Hero Section Button text",
+      "id": "hero-btn-text",
+      "default": "Button text"
+    },
+    {
+      "type": "url",
+      "label": "Hero Section Button Link",
+      "id": "herobtnlink"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Custom Hero Section"
+    }
+  ]
+}
+{% endschema %}
